@@ -15,7 +15,6 @@ def delete():
         deleted = int(input("What note do you want to delete? Write the number of it.\n"))-1
         list1 = file.readlines()
         
-        #list1[deleted-1] = ''
     with open('notes.txt', 'w', encoding ='utf-8') as file:
         a = 0
     with open('notes.txt', 'r+', encoding='utf-8') as file:
@@ -26,8 +25,6 @@ def delete():
                 continue
             else:
                 file.writelines(f"{i}. {list1[i][3:]}")
-        #for i in range(1, len(list1)):
-           # file.writelines(f"{i}. {list1[i][3:]}\n")
         
 def search(x):
     with open('notes.txt', 'r+', encoding='utf-8') as file:
@@ -44,7 +41,6 @@ def show():
     with open('notes.txt', 'r+', encoding='utf-8') as file:
         for i in file.readlines():
             print(i)
-       # print(*file)
 
         
 def interface():
@@ -61,7 +57,6 @@ def interface():
       match answer:
           case "1":
               create()
-              #print(file.readlines())
           case "2":
               delete()
           case "3":
@@ -72,14 +67,10 @@ def interface():
               break
           case "5":
               show()
-              #show(list1)
-              #print(list1)
           case _:
             print("You can choose only 1-5. Try again:")
             continue
 
-#with open('notes.txt', 'r+', encoding='utf-8') as file:
-#    list1 = file.readlines()
 interface()
 
 
