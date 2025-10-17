@@ -19,14 +19,16 @@ def delete():
         a = 0
     with open('notes.txt', 'r+', encoding='utf-8') as file:
         for i in range(len(list1)):
+            ind = list1[i].find(' ')
             if i < deleted:
-                file.writelines(f"{i+1}. {list1[i][3:]}")
+                file.writelines(f"{i+1}. {list1[i][ind+1:]}")
             elif i == deleted:
                 continue
             else:
-                file.writelines(f"{i}. {list1[i][3:]}")
+                file.writelines(f"{i}. {list1[i][ind+1:]}")
         
-def search(x):
+def search():
+    x = int(input("What note do you want to see& Write the number of it. \n"))
     with open('notes.txt', 'r+', encoding='utf-8') as file:
         print(file.readlines()[x-1])
     
@@ -34,7 +36,7 @@ def search(x):
 def close():
     with open('notes.txt', 'r+', encoding='utf-8') as file:
         print("Thank you, goodbye")
-        file.close()
+        os._exit(0)
     
         
 def show(): 
@@ -60,11 +62,9 @@ def interface():
           case "2":
               delete()
           case "3":
-              x = int(input("What note do you want to see& Write the number of it. \n"))
-              search(x)
+              search()
           case "4":
               close()
-              break
           case "5":
               show()
           case _:
