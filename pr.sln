@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Projects", "Projects", "{75B63B8D-6012-47E8-A342-4D0FE37A4501}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "C#", "C#", "{8CF9292C-3C1E-466A-B863-CD1D3FAD0B96}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pr", "Projects\C#\pr\pr.csproj", "{D7BDFFFD-BBD1-4D1C-AC82-4175D82EEBB6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D7BDFFFD-BBD1-4D1C-AC82-4175D82EEBB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7BDFFFD-BBD1-4D1C-AC82-4175D82EEBB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7BDFFFD-BBD1-4D1C-AC82-4175D82EEBB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7BDFFFD-BBD1-4D1C-AC82-4175D82EEBB6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8CF9292C-3C1E-466A-B863-CD1D3FAD0B96} = {75B63B8D-6012-47E8-A342-4D0FE37A4501}
+		{D7BDFFFD-BBD1-4D1C-AC82-4175D82EEBB6} = {8CF9292C-3C1E-466A-B863-CD1D3FAD0B96}
+	EndGlobalSection
+EndGlobal
