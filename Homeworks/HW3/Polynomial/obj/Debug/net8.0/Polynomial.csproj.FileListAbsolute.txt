@@ -1,0 +1,15 @@
+C:\Users\uralo\OneDrive\Документы\IT\Homeworks\HW3\Polynomial\bin\Debug\net8.0\Polynomial.exe
+C:\Users\uralo\OneDrive\Документы\IT\Homeworks\HW3\Polynomial\bin\Debug\net8.0\Polynomial.deps.json
+C:\Users\uralo\OneDrive\Документы\IT\Homeworks\HW3\Polynomial\bin\Debug\net8.0\Polynomial.runtimeconfig.json
+C:\Users\uralo\OneDrive\Документы\IT\Homeworks\HW3\Polynomial\bin\Debug\net8.0\Polynomial.dll
+C:\Users\uralo\OneDrive\Документы\IT\Homeworks\HW3\Polynomial\bin\Debug\net8.0\Polynomial.pdb
+C:\Users\uralo\OneDrive\Документы\IT\Homeworks\HW3\Polynomial\obj\Debug\net8.0\Polynomial.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\uralo\OneDrive\Документы\IT\Homeworks\HW3\Polynomial\obj\Debug\net8.0\Polynomial.AssemblyInfoInputs.cache
+C:\Users\uralo\OneDrive\Документы\IT\Homeworks\HW3\Polynomial\obj\Debug\net8.0\Polynomial.AssemblyInfo.cs
+C:\Users\uralo\OneDrive\Документы\IT\Homeworks\HW3\Polynomial\obj\Debug\net8.0\Polynomial.csproj.CoreCompileInputs.cache
+C:\Users\uralo\OneDrive\Документы\IT\Homeworks\HW3\Polynomial\obj\Debug\net8.0\Polynomial.sourcelink.json
+C:\Users\uralo\OneDrive\Документы\IT\Homeworks\HW3\Polynomial\obj\Debug\net8.0\Polynomial.dll
+C:\Users\uralo\OneDrive\Документы\IT\Homeworks\HW3\Polynomial\obj\Debug\net8.0\refint\Polynomial.dll
+C:\Users\uralo\OneDrive\Документы\IT\Homeworks\HW3\Polynomial\obj\Debug\net8.0\Polynomial.pdb
+C:\Users\uralo\OneDrive\Документы\IT\Homeworks\HW3\Polynomial\obj\Debug\net8.0\Polynomial.genruntimeconfig.cache
+C:\Users\uralo\OneDrive\Документы\IT\Homeworks\HW3\Polynomial\obj\Debug\net8.0\ref\Polynomial.dll

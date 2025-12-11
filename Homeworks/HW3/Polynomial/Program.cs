@@ -54,6 +54,7 @@ class Polynomial
         {
             if (this.coefs[i] == 0)
             {
+                s += " + ";
                 continue;
 
             }
@@ -121,6 +122,39 @@ class Polynomial
         Polynomial obj3 = new Polynomial(c_obj3);
         return obj3;
     }
+
+    public static Polynomial operator *(double k, Polynomial obj1)
+    {
+        return obj1*k;
+    }
+
+    double Evaluate(double x)
+    {
+        double res = 0;
+        for (int i = 0; i<this.coefs.Length; i++){
+            res+=coefs[i]*(Math.Pow(x, i));
+        }
+        return res;
+    }
+
+    public static Polynomial operator *(Polynomial obj1, Polynomial obj2)
+    {
+        double[] c_obj1 = (double[])obj1.Coefs.Clone();
+        double[] c_obj2 = (double[])obj2.Coefs.Clone();
+        int d_obj1 = obj1.coefs.Length - 1;
+        int d_obj2 = obj2.coefs.Length - 1;
+        double[] c_obj3 = new double[d_obj1+d_obj2+1];
+        for (int i=0; i<d_obj1+1; i++)
+        {
+            for (int j=0; j<d_obj2+1; j++)
+            {
+                c_obj3[i+j] = c_obj1[i]+c_obj2[j]; 
+            }
+        }
+        Polynomial obj3 = new Polynomial(c_obj3);
+        return obj3;
+    }
+
 }
 
 class Programm
@@ -174,16 +208,30 @@ class Programm
         if (answer == "1") { Console.WriteLine(p1 + p2); }
         else if (answer == "2")
         {
-            Console.Write("What number do you want to multiply the polynomial №1 by?");
-            double x = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine(p1 * x);
+            Console.WriteLine("What would you like to do? \n1. polynomial*number \n2. Number*polynomial \n3. Polynomial*polynomial");
+            string ans = Console.ReadLine();
+            if (ans == "1"){
+                Console.Write("What number do you want to multiply the polynomial №1 by? ");
+                double x = Convert.ToDouble(Console.ReadLine());
+                Console.WriteLine(p1 * x);
+                }            
+            else if (ans == "2")
+            {
+                Console.Write("What number do you want to multiply the polynomial №1 by? ");
+                double x = Convert.ToDouble(Console.ReadLine());
+                Console.WriteLine(p1 * x);
+            }
+            else if (ans == "3") {Console.WriteLine(p1*p2);}
+            else {
+                Console.WriteLine("Try again");
+                ans = Console.ReadLine();}
+            
         }
-        else if (answer == "")
-        {
+        else if (answer =="3"){ Console.WriteLine(p1); Console.WriteLine(p2);}
+        
+        else {
             Console.Write("Please, try again");
             answer = Console.ReadLine();
         }
-        else if (answer == "3"){ Console.WriteLine(p1);}
     }
-
 }

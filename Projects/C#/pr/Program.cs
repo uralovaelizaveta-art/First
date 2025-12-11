@@ -121,6 +121,11 @@ class Polynomial
         Polynomial obj3 = new Polynomial(c_obj3);
         return obj3;
     }
+
+    public static Polynomial operator *(double k, Polynomial obj1)
+    {
+        return obj1*k;
+    }
 }
 
 class Programm
@@ -177,6 +182,7 @@ class Programm
             Console.Write("What number do you want to multiply the polynomial №1 by?");
             double x = Convert.ToDouble(Console.ReadLine());
             Console.WriteLine(p1 * x);
+            Console.WriteLine(x*p1);
         }
         else if (answer == "")
         {
