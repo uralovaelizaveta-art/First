@@ -1,0 +1,163 @@
+Абстрактный класс с локациями:
+наследники - конкретные локации
+(класс абстрактный, чтобы объединить классы-наследники, так как каждый из них имеет одинаковые характеристики (поля), которые нужно прописать в главном обобщающем их классе)
+
+
+
+Объекты взаимодействия
+команды пользователя
+условия
+эффекты
+события
+квесты
+структура мира
+обязательные игровые механизмы
+
+
+#флаг - булл переменная, которая отвечает на вопросы с помощью "да" или "нет"
+
+Основные классы
+• Game - игра
+• GameState - состояние игры
+• Location - локации
+• Player - игрок
+
+Интерфейсы
+• ICommand - команды
+• IInteractable - взаимодействие
+• ICondition - состояние
+• IEffect - отвечает за эффекты. Эффект изменяет состояние игры (
+
+Абстрактные классы
+• CommandBase - базовые команды
+• ConditionBase - состояния
+• EffectBase - эффекты
+• GameEventBase - события
+
+Команды
+• LookCommand - посмотреть
+• GoCommand - идти
+• InteractCommand - взаимодействовать
+• InventoryCommand - просмотр инвертаря
+• HelpCommand - список команд
+
+
+Условия
+• HasItemCondition
+• FlagCondition
+• HealthCondition
+• AndCondition
+• OrCondition
+• NotCondition
+
+Эффекты (реализуются через интерфейс IEffect)
+• AddItemEffect
+• RemoveItemEffect
+• SetFlagEffect
+• DamageEffect
+• HealEffect
+• LogEffect
+• AddExitEffect
+• ChangeLocationEffect
+
+Объекты
+• Chest
+• Door
+• NPC
+• Trap
+
+События
+• OnEnterLocationEvent
+• OnTurnEvent
+• OneTimeEvent
+
+
+Минимальный набор предметов:
+• Key - для открытия дверей
+• Torch - факел
+• Fuse - запал, чтобы зажечь бомбу
+• Wrench - гаечный ключ для починки генератора
+Bomb - бомба
+Ladder - лестница
+Password_pieces - кусочки пароля на выход
+
+
+
+Сюжет игры:
+Игрок попадает в холл, где ему объявляются правила игры, суть - выбраться из замка живым.
+Если осмотреться, можно найти 3 пути: Выход из игры, вход на крышу, дверь в следующую комнату. Все остальные выходы закрыты, кроме двери. Рядом с выходом из игры есть планшет, который выключен. Выход на крышу находится высоко на потолке. Рядом находится надпись "Выход на крышу в плохую погоду очень опасен". Если побегать по холлу, можно найти бумажку с цифрой.
+Дверь ведет в лабиринт. Внутри лабиринта можно найти:
+гаечный ключ (для генератора)
+бумажка с цифрой
+факел 
+
+Если найти выход из лабиринта, можно попасть на склад, на котором можно найти бомбу, бумажку с цифрой, ключ, который открывает дверь из холла, и лестница. Если воспользоваться лестницей в холле, то можно попасть на чердак, на котором можно найти запал. Запал можно использовать, чтобы зажечь факел и бомбу. 
+
+Открывая дверь из холла с помощью найденного ключа, можно попасть в темный коридор. Но пройти туда можно только при наличии зажжённого факела. В темном коридоре есть бумажка с цифрой и два выхода, один из которых является ловушкой. Если у героя нет с собой бомбы, то он проиграл. Если есть, то он выходит. Второй выход ведет в комнату с генератором, для включения которого требуется гаечный ключ. После включения начинает работать планшет у выхода из игры. Туда надо ввести найденные цифры, после чего герой выходит из игры и побеждает.
+
+Интерфейсы
+ICommand - команды
+IInteractable - взаимодействие
+ICondition - состояние
+IEffect - отвечает за эффекты. Эффект изменяет состояние игры (
+IGameState - определяет состояние игры
+
+Абстрактные классы:
+CommandBase (базовые команды) : ICommand
+ConditionBase (состояния) : ICondition
+EffectBase (эффекты) : IEffect
+GameEventBase - события
+LocationBase - локации
+
+Локации:
+Hall — стартовая зона
+Storage — склад
+DarkCorridor — тёмный коридор
+GeneratorRoom — комната генератора
+Exit — выход
+labyrinth - лабиринт
+Roof - крыша
+trap room - комната-ловушка
+
+Команды:
+LookCommand : CommandBase
+GoCommand : CommandBase
+InteractCommand : CommandBase
+InventoryCommand : CommandBase
+HelpCommand : CommandBase
+
+Условия:
+HasItemCondition : ConditionBase
+FlagCondition : ConditionBase
+HealthCondition : ConditionBase
+AndCondition : ConditionBase
+OrCondition : ConditionBase
+NotCondition : ConditionBase
+
+Эффекты:
+AddItemEffect : EffectBase
+RemoveItemEffect : EffectBase
+SetFlagEffect : EffectBase
+DamageEffect : EffectBase
+HealEffect : EffectBase
+LogEffect : EffectBase
+AddExitEffect : EffectBase
+ChangeLocationEffect : EffectBase
+
+Объекты взаимодействия:
+Chest : IInteractable
+Door : IInteractable
+NPC : IInteractable
+Trap : IInteractable
+Key - для открытия дверей : IInteractable
+Torch - факел : IInteractable
+Fuse - запал, чтобы зажечь бомбу : IInteractable
+Wrench - гаечный ключ для починки генератора : IInteractable
+Bomb - бомба : IInteractable
+Ladder - лестница : IInteractable
+Password_pieces - кусочки пароля на выход : IInteractable
+
+События:
+OnEnterLocationEvent : GameEventBase
+OnTurnEvent : GameEventBase
+OneTimeEvent : GameEventBase
